@@ -715,6 +715,8 @@ def backend(**args) :
 
     if fmt == 'fasta' :
         for line in fin[line_id:] :
+            part = {}
+            header = {}
             if line.startswith('>') :
                 names.append(line[1:].strip().split()[0])
                 profiles.append([])
